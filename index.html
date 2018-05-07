@@ -107,6 +107,9 @@
       }
 
       var audio = new AudioContext();
+      document.addEventListener('click', () => {
+        audio.resume();
+      });
 
       var master = audio.createGain();
       master.gain.setValueAtTime(0.20, audio.currentTime);
